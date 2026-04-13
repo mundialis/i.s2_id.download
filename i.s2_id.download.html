@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>DESCRIPTION</h2>
+
+<em>i.s2_id.download</em> downloads a Sentinel-2 Level-2A scene from Copernicus
+Data Space by scene ID using <a href="https://eodag.readthedocs.io/">EODAG</a>.
+
+<p>
+The module searches for the given scene ID and downloads the product when a matching product is found.
+</p>
+
+<p>
+Search and download are configured for:
+</p>
+<ul>
+<li>Preferred provider: <tt>Copernicus Data Space Ecosystem (CDSE)</tt> </li>
+<li>Collection: <tt>S2_MSI_L2A</tt></li>
+</ul>
+
+
+<h2>EXAMPLES</h2>
+
+<h3>Download a scene to an existing directory</h3>
+
+<div class="code"><pre>
+i.s2_id.download \
+    s2_id=S2B_MSIL2A_20240109T103329_N0510_R108_T32ULB_20240109T114910 \
+    download_dir=/path/to/download_dir
+</pre></div>
+
+
+<h2>NOTES</h2>
+
+<ul>
+<li>Requires a working EODAG installation.</li>
+<li>For <tt>CDSE</tt>, make sure authentication is configured in EODAG.</li>
+<li>If no match is found for <tt>s2_id</tt>, no download is performed.</li>
+<li>Downloaded archive is not automatically extracted.</li>
+</ul>
+
+<h2>SEE ALSO</h2>
+
+<ul>
+<li><a href="https://eodag.readthedocs.io/en/stable/getting_started_guide/install.html">EODAG installation</a></li>
+<li><a href="https://dataspace.copernicus.eu/">CDSE</a></li>
+<li><a href="https://stacspec.org/en">STAC specification</a></li>
+</ul>
+
+<h2>AUTHOR</h2>
+
+Jonas Pischke,
+<a href="https://www.mundialis.de/">mundialis GmbH &amp; Co. KG</a>, Germany
+
+</body>
+</html>
